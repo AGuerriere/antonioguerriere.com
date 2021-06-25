@@ -1,7 +1,15 @@
 body {
-    background-color: #282c34;
-    color: white;
+    background-color: whitesmoke;
+    color: #282c34;
     padding: 40px;
     font-family: Arial;
-    text-align: center;
   }
+
+.intro {
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+}
