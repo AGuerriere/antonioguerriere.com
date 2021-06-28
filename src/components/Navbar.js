@@ -1,10 +1,12 @@
 import React from 'react'
 import './Navbar.css'
 
+
+
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <div className="brand-title">AG🚀</div>
+            <div className="brand-title">🚀 AG</div>
             <a href="#" className="toggle-button">
                 <span className="bar"></span>
                 <span className="bar"></span>
@@ -20,5 +22,6 @@ const Navbar = () => {
         </nav>
     )
 }
+
 
 export default Navbar
