@@ -1,15 +1,23 @@
-body {
-    background-color: whitesmoke;
-    color: #282c34;
-    padding: 40px;
-    font-family: Arial;
-  }
-
-.intro {
-    justify-content: center;
-    align-items: center;
+header {
+  padding: 40px;
+  font-family: Arial;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box; 
+  text-align: center; 
+  color: rgb(0, 102, 255);
+  width:100vw;
 }
 
-header {
-    display: flex;
+.gitLogo {
+  margin-bottom: 0;
+}
+
+#gitLink {
+  margin-top: 0;
+}
+
+.rocket {
+  
+  max-width:100%;
 }
