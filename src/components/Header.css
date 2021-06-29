@@ -21,3 +21,10 @@ header {
   
   max-width:100%;
 }
+
+.intro {
+  font-size: 30px;
+  background: -webkit-linear-gradient(rgb(0, 59, 254), rgb(1, 255, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
