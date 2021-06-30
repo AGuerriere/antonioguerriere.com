@@ -1,11 +1,11 @@
 import React from 'react'
 import rocket from '../rocket.gif'
 import git from './GitHub.png'
-import './Header.css'
+import './Home.css'
 
-export const Header = () => {
+export const Home = () => {
     return (
-        <header>
+        <main>
             <div className="intro">
                 <h1>Antonio <span id="lastName">Guerriere</span></h1>
                 <h3>Software Developer</h3>
@@ -16,9 +16,9 @@ export const Header = () => {
                 <p id="gitLink"><a href="https://github.com/AGuerriere">GitHub</a></p>
             </div>
 
-        </header>
+        </main>
     )
 }
 
 
-export default Header
+export default Home
