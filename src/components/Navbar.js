@@ -6,14 +6,17 @@ import {
     Route,
     Link
   } from "react-router-dom";
-
+import Home from './Home.js';
+import Projects from './Projects';
+import Skills from './Skills';
+import About from './About'
 
 const Navbar = () => {
     return (
         <Router>
         <div>
         <nav className="navbar">
-            <div className="brand-title"><Link to="/">🚀 AG</Link></div>
+            <div className="brand-title"><Link to="/" id="homepage">🚀 AG</Link></div>
             <a href="#" className="toggle-button">
                 <span className="bar"></span>
                 <span className="bar"></span>
@@ -53,20 +56,5 @@ const Navbar = () => {
     );
 }
 
-
-function Home() {
-    return <h2>Home</h2>;
-  }
-  
-  function About() {
-    return <h2>About</h2>;
-  }
-  
-  function Projects() {
-    return <h2>Projects</h2>;
-  }
-  function Skills() {
-    return <h2>Skills</h2>;
-  }
 
 export default Navbar

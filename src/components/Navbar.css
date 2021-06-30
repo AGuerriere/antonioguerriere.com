@@ -38,6 +38,12 @@ body {
     display: block;
 }
 
+#homepage {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
 .navbar-links li:hover {
     background-color: rgb(0, 255, 145);
 }
