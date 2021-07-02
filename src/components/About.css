@@ -1,3 +1,25 @@
 .avatar {
-    max-height: 100px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+.profile {
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box; 
+    text-align: center; 
+    width:100vw;
+}
+
+.title {
+    font-size: 30px;
+    background: -webkit-linear-gradient(rgb(0, 59, 254), rgb(1, 255, 251));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    text-align: justify;
+    text-justify: inter-word;
 }
