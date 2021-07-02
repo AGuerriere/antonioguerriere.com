@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import Card from './Card.js';
+import CardUI from './CardUI.js';
 import img1 from './assets/drum.png';
 import img2 from './assets/cats.png';
 import img3 from './assets/colors.png';
 import img4 from './assets/portfolio.png';
-import Projects from './Projects.js';
 
 const allProjects = [
     {
@@ -19,7 +18,7 @@ const allProjects = [
         live: "https://aguerriere.github.io/catfriends-react/",
         repo: "https://github.com/AGuerriere/catfriends-react",
         description: "React fun project, using the Robohash API to create unique images and using data from JSONPlaceholder API",
-        image: img3
+        image: img2
     },
     {
         title: "Drum Keyboard", 
@@ -33,7 +32,7 @@ const allProjects = [
         live: "https://aguerriere.github.io/gradient-background-generator/",
         repo: "https://github.com/AGuerriere/gradient-background-generator",
         description: "A gradient background generator, created using HTML and CSS only",
-        image: img2
+        image: img3
     }
 ]
 
@@ -43,7 +42,7 @@ const Cards = () => {
             <div className="row">
                 {allProjects.map((project, index) => {return( 
                     <div className="col-md-4">
-                        <Card key={project.title} imgsrc={project.image} title={project.title} liveLink={project.live} repoLink={project.repo}/>
+                        <CardUI key={project.title} imgsrc={project.image} title={project.title} liveLink={project.live} repoLink={project.repo} description={project.description}/>
                     </div>)
                 })}
             </div>

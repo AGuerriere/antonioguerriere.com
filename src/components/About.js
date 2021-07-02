@@ -3,7 +3,9 @@ import React from 'react';
 const About = () => {
     return (
         <div>
-            Project
+            <div className="avatar">
+                <img src="" alt="" className="avatar-pic" />
+            </div>
         </div>
     )
 }

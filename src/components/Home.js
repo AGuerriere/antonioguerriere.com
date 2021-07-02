@@ -1,6 +1,6 @@
 import React from 'react'
 import rocket from '../rocket.gif'
-import git from './GitHub.png'
+import git from './assets/GitHub.png'
 import './Home.css'
 
 export const Home = () => {
