@@ -21,3 +21,10 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+@media screen and (min-width: 900px) {
+    .profile {
+      padding-left: 30rem;
+      padding-right: 30rem;
+    }
+  }
