@@ -1,5 +1,5 @@
 import React from 'react';
-import myPic from './assets/me.png'
+import myPic from './assets/me.jpg'
 import './About.css'
 import git from './assets/GitHub.png'
 

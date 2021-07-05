@@ -1,7 +1,7 @@
 import React from 'react';
 import CardUI from './CardUI.js';
 import img1 from './assets/drum.png';
-import img2 from './assets/cats.png';
+import img2 from './assets/cats.jpg';
 import img3 from './assets/colors.png';
 import img4 from './assets/portfolio.png';
 
