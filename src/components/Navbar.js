@@ -17,11 +17,11 @@ const Navbar = () => {
         <div>
         <nav className="navbar">
             <div className="brand-title"><Link to="/" id="homepage">🚀 AG</Link></div>
-            <a href="#" className="toggle-button">
+            {/* <a href="#" className="toggle-button">
                 <span className="bar"></span>
                 <span className="bar"></span>
                 <span className="bar"></span>
-            </a>
+            </a> */}
             <div className="navbar-links">
                 <ul>
                     <li>
