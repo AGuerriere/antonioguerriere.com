@@ -18,7 +18,8 @@ body {
 
 .brand-title {
     font-size: 1.5rem;
-    margin: .5rem;
+    padding: 0.5rem;
+    
 }
 
 .navbar-links ul {
@@ -46,6 +47,10 @@ body {
 
 .navbar-links li:hover {
     background-color: rgb(0, 255, 145);
+}
+
+.brand-title:hover {
+    background-color: rgba(0,255,250,1);
 }
 
 .toggle-button {
