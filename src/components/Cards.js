@@ -10,7 +10,7 @@ const allProjects = [
         title: "antonioguerriere.com", 
         live: "https://www.antonioguerriere.com/",
         repo: "https://github.com/AGuerriere?tab=repositories",
-        description: "React fun project, using the Robohash API to create unique images and using data from JSONPlaceholder API",
+        description: " My Porfolio - This is the portfolio I created to showcase my work. I created it using React, Bootstrap and React Router.",
         image: img4,
         key: 1
     },
@@ -18,7 +18,7 @@ const allProjects = [
         title: "CatFriends", 
         live: "https://aguerriere.github.io/catfriends-react/",
         repo: "https://github.com/AGuerriere/catfriends-react",
-        description: "React fun project, using the Robohash API to create unique images and using data from JSONPlaceholder API",
+        description: "A simple React app, created using the Robohash API to create unique images and using data from JSONPlaceholder fake API",
         image: img2,
         key: 2
     },

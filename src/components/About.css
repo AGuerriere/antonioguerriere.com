@@ -22,7 +22,7 @@
     text-justify: inter-word;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1500px) {
     .profile {
       padding-left: 30rem;
       padding-right: 30rem;
