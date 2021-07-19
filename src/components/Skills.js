@@ -11,9 +11,9 @@ const Skills = () => {
                     <SkillsUI title="💻 Front-end" 
                     skillList={['React', 'HTML', 'CSS', 'JavaSript']}/>
                     <SkillsUI title="⚙️ Back-end" 
-                    skillList={['Node', 'Python', 'SqlLite']}/>
+                    skillList={['Node', 'Express', 'Python', 'SqlLite']}/>
                     <SkillsUI title="🛠 Tools and Libraries" 
-                    skillList={['Git/GitHub', 'Selenium', 'Bash/Zsh', 'Regex']}/>
+                    skillList={['Git/GitHub', 'Npm', 'Yarn', 'Selenium', 'Bash/Zsh', 'Regex']}/>
 
  
                 </div>
