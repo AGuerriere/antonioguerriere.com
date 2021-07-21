@@ -26,7 +26,7 @@ const allProjects = [
         title: "Drum Keyboard", 
         live: "https://drum-keyboard.netlify.app",
         repo: "https://github.com/AGuerriere/js-drum",
-        description: "An online Drum that can be played with the keyboard",
+        description: "This is an online drum that can be played with the keyboard created using HTML, CSS and Vanilla Javascript.",
         image: img1,
         key: 3
     },
