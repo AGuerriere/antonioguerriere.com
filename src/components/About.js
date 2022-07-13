@@ -16,7 +16,7 @@ const About = () => {
                         <h1>About Me</h1>
                     </div>
                     <div className="description ">
-                    First year BSc (Honours) Computing and IT student looking to get a role as a software developer. I also have a strong background in sales, with over 10 years experience, including 3 years building and running my own consultancy. Before starting university I learned, through self teaching, how to use Javascript, Python, React, CSS, HTML, Node, Express, Bash scripting, Git and GitHub. 
+                        Currently a Front End Softare developer working with React, Javascript, HTML, CSS and testing with Playwright. I am also a first year BSc (Honours) Computing and IT student. I also have a strong background in sales, with over 10 years experience, including 3 years building and running my own consultancy. Before starting university I learned, through self teaching, how to use Javascript, Python, React, CSS, HTML, Node, Express, Bash scripting, Git and GitHub. 
                     </div>
                     <div>
                         <img className="gitLogo" src={git} alt="github" />
