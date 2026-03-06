@@ -133,42 +133,6 @@ export default function Home() {
             </ul>
           </section>
 
-          {/* ── Academic ────────────────────────────────────── */}
-          <section className={styles.section} aria-labelledby="academic-heading">
-            <h2 id="academic-heading" className={styles.sectionHeading}>
-              Academic
-            </h2>
-            <ul className={styles.entries}>
-              <li className={styles.entry}>
-                <p className={styles.entryTitle}>
-                  MSc Artificial Intelligence &amp; Data Science
-                </p>
-                <p className={styles.entryMeta}>
-                  Queen&apos;s University Belfast
-                </p>
-                <p className={styles.entryDesc}>
-                  Modules include statistical learning, NLP, and machine
-                  learning engineering. Current group research project:
-                  predictive modelling on urban mobility datasets (OLS
-                  regression, hypothesis testing, diagnostic analysis). Expected
-                  graduation: 2026.
-                </p>
-              </li>
-
-              <li className={styles.entry}>
-                <p className={styles.entryTitle}>
-                  BSc&nbsp;(Hons) Computing &amp; IT — First-Class Honours
-                </p>
-                <p className={styles.entryMeta}>The Open University</p>
-                <p className={styles.entryDesc}>
-                  Foundations in software engineering, data structures,
-                  algorithms, and human-computer interaction. Final
-                  classification: First Class.
-                </p>
-              </li>
-            </ul>
-          </section>
-
           {/* ── Research ────────────────────────────────────── */}
           <section className={styles.section} aria-labelledby="research-heading">
             <h2 id="research-heading" className={styles.sectionHeading}>
@@ -192,6 +156,30 @@ export default function Home() {
             >
               Google Scholar <span aria-hidden="true">↗</span>
             </a>
+          </section>
+
+          {/* ── Academic ────────────────────────────────────── */}
+          <section className={styles.section} aria-labelledby="academic-heading">
+            <h2 id="academic-heading" className={styles.sectionHeading}>
+              Academic
+            </h2>
+            <ul className={styles.entries}>
+              <li className={styles.entry}>
+                <p className={styles.entryTitle}>
+                  MSc Artificial Intelligence &amp; Data Science
+                </p>
+                <p className={styles.entryMeta}>
+                  Queen&apos;s University Belfast
+                </p>
+              </li>
+
+              <li className={styles.entry}>
+                <p className={styles.entryTitle}>
+                  BSc&nbsp;(Hons) Computing &amp; IT — First-Class Honours
+                </p>
+                <p className={styles.entryMeta}>The Open University</p>
+              </li>
+            </ul>
           </section>
 
           <footer className={styles.footer}>
