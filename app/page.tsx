@@ -5,10 +5,26 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Antonio Guerriere',
-  description: 'Technologist & entrepreneur. Open University First-Class graduate.',
+  jobTitle: 'Founder & CEO',
+  worksFor: { '@type': 'Organization', name: 'Mind Technica' },
+  description:
+    "Founder and CEO of Mind Technica. AI and automation entrepreneur. MSc AI & Data Science candidate at Queen's University Belfast.",
   url: 'https://antonioguerriere.com/',
   image: 'https://antonioguerriere.com/images/antonio.webp',
-  sameAs: ['https://www.linkedin.com/in/antonioguerriere/'],
+  sameAs: [
+    'https://www.linkedin.com/in/antonioguerriere/',
+    'https://mindtechnica.com',
+  ],
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'The Open University',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: "Queen's University Belfast",
+    },
+  ],
 }
 
 export default function Home() {
@@ -23,39 +39,41 @@ export default function Home() {
           <AvatarModal />
           <div>
             <h1>Antonio Guerriere</h1>
-            <p className={styles.subtitle}>
-              Technologist &amp; entrepreneur &bull; Queen&apos;s University Belfast — MSc
-              Artificial Intelligence &amp; Data Science (2026) &bull; The Open University —
-              BSc&nbsp;(Hons) Computing, First-Class Honours
-            </p>
+            <p className={styles.subtitle}>Founder &amp; CEO, Mind Technica</p>
           </div>
         </header>
 
         <main>
-          <p className={styles.bio}>
-            I&apos;m an AI and automation-focused founder working at the intersection of intelligent
-            systems, data analytics, and applied machine learning. I hold a{' '}
-            <strong>First-Class Honours</strong> degree in Computing and IT from the{' '}
-            <strong>Open University</strong> and am currently pursuing an MSc in Artificial
-            Intelligence and Data Science at <strong>Queen&apos;s University Belfast</strong>.
-            I&apos;m the founder of <strong>Mind Technica</strong>, where our current focus is
-            designing and deploying cutting-edge AI solutions, while exploring strategic partnerships
-            and new ventures.
-          </p>
-
-          <div className={styles.pillbar} aria-label="Focus areas">
-            <span className={styles.pill}>
-              <span className={styles.dot} aria-hidden="true" /> AI &amp; Data Analytics
-            </span>
-            <span className={styles.pill}>
-              <span className={styles.dot} aria-hidden="true" /> Automation
-            </span>
-            <span className={styles.pill}>
-              <span className={styles.dot} aria-hidden="true" /> Research
-            </span>
-            <span className={styles.pill}>
-              <span className={styles.dot} aria-hidden="true" /> Strategy &amp; Ops
-            </span>
+          <div className={styles.prose}>
+            <p>
+              Antonio Guerriere is the founder and CEO of{' '}
+              <strong>Mind Technica</strong>, an AI and automation consultancy
+              based in Northern Ireland. His work is grounded in a deep belief
+              that artificial intelligence, if developed and deployed with the
+              right intent, has the potential to be one of the most
+              transformative forces in human history — accelerating scientific
+              discovery, expanding access to knowledge, and raising the quality
+              of life for people everywhere.
+            </p>
+            <p>
+              Through Mind Technica, Antonio designs and deploys intelligent
+              systems — from machine learning pipelines to end-to-end automation
+              — for organisations looking to lead in an AI-native world. He is
+              equally focused on building the strategic partnerships and ventures
+              needed to scale that mission beyond consulting, into products and
+              platforms that create lasting, broad-based value.
+            </p>
+            <p>
+              Beyond the commercial, Antonio is drawn to the larger questions.
+              He is actively engaged with the challenges of AI safety,
+              interpretability, and alignment — the foundational problems that
+              will determine whether the technology fulfils its promise or falls
+              short of it. He believes that getting AI right is not just a
+              technical challenge, but a civilisational one, and that the
+              entrepreneurs, researchers, and builders working at this frontier
+              carry a genuine responsibility to ensure that what they create is
+              beneficial not for the few, but for all.
+            </p>
           </div>
 
           <div className={styles.links}>
@@ -73,12 +91,36 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Company site
+              Mind Technica
             </a>
           </div>
 
+          <hr className={styles.divider} />
+
+          <section aria-labelledby="academic-heading">
+            <h2 id="academic-heading" className={styles.sectionHeading}>
+              Academic
+            </h2>
+            <div className={styles.prose}>
+              <p>
+                Antonio holds a <strong>First-Class Honours</strong> degree in
+                Computing and IT from <strong>The Open University</strong> and
+                is currently pursuing an{' '}
+                <strong>
+                  MSc in Artificial Intelligence and Data Science
+                </strong>{' '}
+                at <strong>Queen&apos;s University Belfast</strong>, where his
+                research interests span neural network interpretability, applied
+                NLP, and the strategic implications of large-scale AI systems.
+                He is a co-investigator on research presented at{' '}
+                <strong>ICERI 2024</strong>.
+              </p>
+            </div>
+          </section>
+
           <footer className={styles.footer}>
-            Available for conversations about new ventures, acquisitions, and partnerships.
+            Available for conversations about new ventures, acquisitions, and
+            partnerships.
             <span className={styles.sep}>•</span>
             Based between the UK, Ireland and Italy.
           </footer>

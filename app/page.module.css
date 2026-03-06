@@ -11,45 +11,29 @@
 }
 
 .subtitle {
-  margin-top: 6px;
+  margin: 6px 0 0;
   color: var(--muted);
   font-size: clamp(14px, 2.5vw, 18px);
 }
 
-.bio {
-  font-size: clamp(16px, 2.6vw, 20px);
+/* ── Body copy ─────────────────────────────────────────── */
+.prose {
+  margin-top: 32px;
 }
 
-.pillbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 18px 0 0;
+.prose p {
+  font-size: clamp(16px, 2.4vw, 19px);
+  line-height: 1.75;
+  margin: 0 0 22px;
 }
 
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: var(--card);
-  color: var(--fg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 14px;
+.prose p:last-child {
+  margin-bottom: 0;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--accent);
-  box-shadow: 0 0 0 6px var(--ring);
-  flex-shrink: 0;
-}
-
+/* ── Buttons ────────────────────────────────────────────── */
 .links {
-  margin-top: 28px;
+  margin-top: 32px;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
@@ -80,6 +64,30 @@
   box-shadow: none;
 }
 
+/* ── Divider ────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin: 48px 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .divider {
+    border-top-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+/* ── Section heading ────────────────────────────────────── */
+.sectionHeading {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
 .footer {
   margin-top: 48px;
   color: var(--muted);
@@ -92,8 +100,7 @@
 }
 
 @media print {
-  .btn,
-  .pillbar {
+  .btn {
     display: none;
   }
 }
