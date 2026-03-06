@@ -177,7 +177,7 @@ export default function Home() {
                 <p className={styles.entryTitle}>
                   BSc&nbsp;(Hons) Computing &amp; IT — First-Class Honours
                 </p>
-                <p className={styles.entryMeta}>The Open University</p>
+                <p className={styles.entryMeta}>The Open University - United Kingdom</p>
               </li>
             </ul>
           </section>
