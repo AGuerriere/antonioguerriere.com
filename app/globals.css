@@ -1,0 +1,53 @@
+:root {
+  --bg: #0f0f12;
+  --fg: #e8e9ed;
+  --muted: #a7abb3;
+  --accent: #7dd3fc;
+  --card: #17181d;
+  --ring: rgba(125, 211, 252, 0.4);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --fg: #111216;
+    --muted: #616672;
+    --card: #f6f7f9;
+    --accent: #0ea5e9;
+    --ring: rgba(14, 165, 233, 0.2);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1000px 600px at 80% -10%, rgba(125, 211, 252, 0.1), transparent 60%),
+    radial-gradient(800px 500px at -10% 10%, rgba(99, 102, 241, 0.08), transparent 60%), var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 48px);
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+}

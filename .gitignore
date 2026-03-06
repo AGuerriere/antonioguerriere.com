@@ -1,2 +1,9 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
 # Local Netlify folder
 .netlify
