@@ -21,6 +21,13 @@ const jsonLd = {
   ],
 }
 
+// Replace hrefs with real URLs when articles are published
+const notes = [
+  { title: 'On Building AI-Native Organisations', href: '/notes/ai-native-organisations' },
+  { title: 'Neural Network Interpretability: A Practitioner\'s Perspective', href: '/notes/nn-interpretability' },
+  { title: 'The Strategic Case for Automation in SMEs', href: '/notes/automation-smes' },
+]
+
 export default function Home() {
   return (
     <>
@@ -90,6 +97,27 @@ export default function Home() {
             </a>
           </div>
 
+          {/* ── Antonio's Notes ──────────────────────────────── */}
+          <section className={styles.section} aria-labelledby="notes-heading">
+            <h2 id="notes-heading" className={styles.sectionHeading}>
+              <a href="/notes" className={styles.sectionHeadingLink}>
+                Antonio&apos;s Notes
+              </a>
+            </h2>
+            <ul className={styles.notesList}>
+              {notes.map((note) => (
+                <li key={note.href} className={styles.notesItem}>
+                  <a href={note.href} className={styles.notesLink}>
+                    {note.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href="/notes" className={styles.seeMore}>
+              All notes <span aria-hidden="true">→</span>
+            </a>
+          </section>
+
           {/* ── Work ────────────────────────────────────────── */}
           <section className={styles.section} aria-labelledby="work-heading">
             <h2 id="work-heading" className={styles.sectionHeading}>
@@ -97,10 +125,7 @@ export default function Home() {
             </h2>
             <ul className={styles.entries}>
               <li className={styles.entry}>
-                <div className={styles.entryHeader}>
-                  <span className={styles.entryTitle}>Mind Technica</span>
-                  <span className={styles.entryYear}>2024–present</span>
-                </div>
+                <p className={styles.entryTitle}>Mind Technica</p>
                 <p className={styles.entryMeta}>
                   Founder &amp; CEO &nbsp;·&nbsp; AI &amp; Automation Consultancy
                 </p>
@@ -115,12 +140,9 @@ export default function Home() {
             </h2>
             <ul className={styles.entries}>
               <li className={styles.entry}>
-                <div className={styles.entryHeader}>
-                  <span className={styles.entryTitle}>
-                    MSc Artificial Intelligence &amp; Data Science
-                  </span>
-                  <span className={styles.entryYear}>2025–2026</span>
-                </div>
+                <p className={styles.entryTitle}>
+                  MSc Artificial Intelligence &amp; Data Science
+                </p>
                 <p className={styles.entryMeta}>
                   Queen&apos;s University Belfast
                 </p>
@@ -134,12 +156,9 @@ export default function Home() {
               </li>
 
               <li className={styles.entry}>
-                <div className={styles.entryHeader}>
-                  <span className={styles.entryTitle}>
-                    BSc&nbsp;(Hons) Computing &amp; IT — First-Class Honours
-                  </span>
-                  <span className={styles.entryYear}>Graduated 2024</span>
-                </div>
+                <p className={styles.entryTitle}>
+                  BSc&nbsp;(Hons) Computing &amp; IT — First-Class Honours
+                </p>
                 <p className={styles.entryMeta}>The Open University</p>
                 <p className={styles.entryDesc}>
                   Foundations in software engineering, data structures,
@@ -157,17 +176,22 @@ export default function Home() {
             </h2>
             <ul className={styles.entries}>
               <li className={styles.entry}>
-                <div className={styles.entryHeader}>
-                  <span className={styles.entryTitle}>
-                    collabnotes — Collaborative Annotation Tool
-                  </span>
-                  <span className={styles.entryYear}>2024</span>
-                </div>
+                <p className={styles.entryTitle}>
+                  collabnotes — Collaborative Annotation Tool
+                </p>
                 <p className={styles.entryMeta}>
                   Presented at ICERI 2024 &nbsp;·&nbsp; Co-investigator
                 </p>
               </li>
             </ul>
+            <a
+              href="https://scholar.google.com/citations?user=DgbhiS4AAAAJ&hl=en&scioq=antonio+guerriere"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.seeMore}
+            >
+              Google Scholar <span aria-hidden="true">↗</span>
+            </a>
           </section>
 
           <footer className={styles.footer}>

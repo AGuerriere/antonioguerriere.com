@@ -80,7 +80,7 @@
   margin-top: 52px;
 }
 
-/* Label + extending rule — mirrors editorial CV style */
+/* Label + extending rule */
 .sectionHeading {
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--muted);
-  margin: 0 0 22px;
+  margin: 0 0 20px;
 }
 
 .sectionHeading::after {
@@ -105,7 +105,70 @@
   }
 }
 
-/* ── Entries ─────────────────────────────────────────────── */
+/* Section heading as a link (Notes) */
+.sectionHeadingLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sectionHeadingLink:hover {
+  color: var(--fg);
+}
+
+/* ── Notes (blog list) ───────────────────────────────────── */
+.notesList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notesItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.notesItem:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: light) {
+  .notesItem,
+  .notesItem:first-child {
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.notesLink {
+  display: block;
+  padding: 11px 0;
+  font-size: clamp(14px, 2vw, 15px);
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+.notesLink:hover {
+  color: var(--accent);
+}
+
+/* ── "See more" / "Google Scholar" link ─────────────────── */
+.seeMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.12s ease;
+}
+
+.seeMore:hover {
+  opacity: 1;
+}
+
+/* ── Entries (Work / Academic / Research) ────────────────── */
 .entries {
   list-style: none;
   margin: 0;
@@ -115,25 +178,12 @@
   gap: 26px;
 }
 
-.entryHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-}
-
 .entryTitle {
   font-size: clamp(14px, 2vw, 15.5px);
   font-weight: 600;
   color: var(--fg);
   line-height: 1.4;
-}
-
-.entryYear {
-  font-size: 13px;
-  color: var(--muted);
-  white-space: nowrap;
-  flex-shrink: 0;
+  margin: 0;
 }
 
 .entryMeta {
@@ -149,17 +199,6 @@
   opacity: 0.72;
   margin: 8px 0 0;
   line-height: 1.7;
-}
-
-@media (max-width: 500px) {
-  .entryHeader {
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .entryYear {
-    font-size: 12px;
-  }
 }
 
 /* ── Footer ──────────────────────────────────────────────── */
