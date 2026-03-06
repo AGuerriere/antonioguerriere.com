@@ -16,14 +16,8 @@ const jsonLd = {
     'https://mindtechnica.com',
   ],
   alumniOf: [
-    {
-      '@type': 'CollegeOrUniversity',
-      name: 'The Open University',
-    },
-    {
-      '@type': 'CollegeOrUniversity',
-      name: "Queen's University Belfast",
-    },
+    { '@type': 'CollegeOrUniversity', name: 'The Open University' },
+    { '@type': 'CollegeOrUniversity', name: "Queen's University Belfast" },
   ],
 }
 
@@ -44,6 +38,7 @@ export default function Home() {
         </header>
 
         <main>
+          {/* ── Bio ─────────────────────────────────────────── */}
           <div className={styles.prose}>
             <p>
               Antonio Guerriere is the founder and CEO of{' '}
@@ -95,27 +90,84 @@ export default function Home() {
             </a>
           </div>
 
-          <hr className={styles.divider} />
+          {/* ── Work ────────────────────────────────────────── */}
+          <section className={styles.section} aria-labelledby="work-heading">
+            <h2 id="work-heading" className={styles.sectionHeading}>
+              Work
+            </h2>
+            <ul className={styles.entries}>
+              <li className={styles.entry}>
+                <div className={styles.entryHeader}>
+                  <span className={styles.entryTitle}>Mind Technica</span>
+                  <span className={styles.entryYear}>2024–present</span>
+                </div>
+                <p className={styles.entryMeta}>
+                  Founder &amp; CEO &nbsp;·&nbsp; AI &amp; Automation Consultancy
+                </p>
+              </li>
+            </ul>
+          </section>
 
-          <section aria-labelledby="academic-heading">
+          {/* ── Academic ────────────────────────────────────── */}
+          <section className={styles.section} aria-labelledby="academic-heading">
             <h2 id="academic-heading" className={styles.sectionHeading}>
               Academic
             </h2>
-            <div className={styles.prose}>
-              <p>
-                Antonio holds a <strong>First-Class Honours</strong> degree in
-                Computing and IT from <strong>The Open University</strong> and
-                is currently pursuing an{' '}
-                <strong>
-                  MSc in Artificial Intelligence and Data Science
-                </strong>{' '}
-                at <strong>Queen&apos;s University Belfast</strong>, where his
-                research interests span neural network interpretability, applied
-                NLP, and the strategic implications of large-scale AI systems.
-                He is a co-investigator on research presented at{' '}
-                <strong>ICERI 2024</strong>.
-              </p>
-            </div>
+            <ul className={styles.entries}>
+              <li className={styles.entry}>
+                <div className={styles.entryHeader}>
+                  <span className={styles.entryTitle}>
+                    MSc Artificial Intelligence &amp; Data Science
+                  </span>
+                  <span className={styles.entryYear}>2025–2026</span>
+                </div>
+                <p className={styles.entryMeta}>
+                  Queen&apos;s University Belfast
+                </p>
+                <p className={styles.entryDesc}>
+                  Modules include statistical learning, NLP, and machine
+                  learning engineering. Current group research project:
+                  predictive modelling on urban mobility datasets (OLS
+                  regression, hypothesis testing, diagnostic analysis). Expected
+                  graduation: 2026.
+                </p>
+              </li>
+
+              <li className={styles.entry}>
+                <div className={styles.entryHeader}>
+                  <span className={styles.entryTitle}>
+                    BSc&nbsp;(Hons) Computing &amp; IT — First-Class Honours
+                  </span>
+                  <span className={styles.entryYear}>Graduated 2024</span>
+                </div>
+                <p className={styles.entryMeta}>The Open University</p>
+                <p className={styles.entryDesc}>
+                  Foundations in software engineering, data structures,
+                  algorithms, and human-computer interaction. Final
+                  classification: First Class.
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          {/* ── Research ────────────────────────────────────── */}
+          <section className={styles.section} aria-labelledby="research-heading">
+            <h2 id="research-heading" className={styles.sectionHeading}>
+              Research
+            </h2>
+            <ul className={styles.entries}>
+              <li className={styles.entry}>
+                <div className={styles.entryHeader}>
+                  <span className={styles.entryTitle}>
+                    collabnotes — Collaborative Annotation Tool
+                  </span>
+                  <span className={styles.entryYear}>2024</span>
+                </div>
+                <p className={styles.entryMeta}>
+                  Presented at ICERI 2024 &nbsp;·&nbsp; Co-investigator
+                </p>
+              </li>
+            </ul>
           </section>
 
           <footer className={styles.footer}>
