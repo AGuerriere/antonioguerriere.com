@@ -47,35 +47,34 @@ export default function Home() {
         <main>
           {/* ── Bio ─────────────────────────────────────────── */}
           <div className={styles.prose}>
-            <p>
-              Antonio Guerriere is the founder and CEO of{' '}
-              <strong>Mind Technica</strong>, an AI and automation consultancy
-              based in Northern Ireland. His work is grounded in a deep belief
-              that artificial intelligence, if developed and deployed with the
-              right intent, has the potential to be one of the most
-              transformative forces in human history — accelerating scientific
-              discovery, expanding access to knowledge, and raising the quality
-              of life for people everywhere.
-            </p>
-            <p>
-              Through Mind Technica, Antonio designs and deploys intelligent
-              systems — from machine learning pipelines to end-to-end automation
-              — for organisations looking to lead in an AI-native world. He is
-              equally focused on building the strategic partnerships and ventures
-              needed to scale that mission beyond consulting, into products and
-              platforms that create lasting, broad-based value.
-            </p>
-            <p>
-              Beyond the commercial, Antonio is drawn to the larger questions.
-              He is actively engaged with the challenges of AI safety,
-              interpretability, and alignment — the foundational problems that
-              will determine whether the technology fulfils its promise or falls
-              short of it. He believes that getting AI right is not just a
-              technical challenge, but a civilisational one, and that the
-              entrepreneurs, researchers, and builders working at this frontier
-              carry a genuine responsibility to ensure that what they create is
-              beneficial not for the few, but for all.
-            </p>
+      <p>
+        Antonio Guerriere is the founder and CEO of{' '}
+        <strong>Mind Technica</strong>, an AI and automation consultancy
+        based in Northern Ireland. His work is driven by the belief that
+        artificial intelligence, if developed and deployed responsibly,
+        has the potential to be one of the most transformative technologies
+        of our time — accelerating scientific discovery, expanding access
+        to knowledge, and improving quality of life for people around the world.
+      </p>
+
+      <p>
+        Through Mind Technica, Antonio designs and deploys intelligent
+        systems — from machine learning pipelines to end-to-end automation —
+        for organisations looking to operate effectively in an increasingly
+        AI-driven world. He is also focused on building the partnerships and
+        ventures needed to scale this work beyond consulting, into products
+        and platforms that create lasting value.
+      </p>
+
+      <p>
+        Beyond the commercial side, Antonio is interested in the broader
+        questions surrounding artificial intelligence. In particular 
+        AI safety, interpretability, and alignment —
+        areas that will play an important role in how the technology evolves.
+        He believes that developing AI responsibly is not only a technical
+        challenge, but also a societal one, and that the people building these
+        systems have a responsibility to ensure they benefit society as a whole.
+      </p>
           </div>
 
           <div className={styles.links}>
