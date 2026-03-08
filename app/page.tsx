@@ -1,4 +1,5 @@
 import AvatarModal from '@/components/AvatarModal'
+import { getAllNotes } from '@/lib/notes'
 import styles from './page.module.css'
 
 const jsonLd = {
@@ -21,14 +22,8 @@ const jsonLd = {
   ],
 }
 
-// Replace hrefs with real URLs when articles are published
-const notes = [
-  { title: 'On Building AI-Native Organisations', href: '/notes/ai-native-organisations' },
-  { title: 'Neural Network Interpretability: A Practitioner\'s Perspective', href: '/notes/nn-interpretability' },
-  { title: 'The Strategic Case for Automation in SMEs', href: '/notes/automation-smes' },
-]
-
 export default function Home() {
+  const notes = getAllNotes().slice(0, 3)
   return (
     <>
       <script
@@ -47,34 +42,29 @@ export default function Home() {
         <main>
           {/* ── Bio ─────────────────────────────────────────── */}
           <div className={styles.prose}>
-      <p>
-        Antonio Guerriere is the founder and CEO of{' '}
-        <strong>Mind Technica</strong>, an AI and automation consultancy
-        based in Northern Ireland. His work is driven by the belief that
-        artificial intelligence, if developed and deployed responsibly,
-        has the potential to be one of the most transformative technologies
-        of our time — accelerating scientific discovery, expanding access
-        to knowledge, and improving quality of life for people around the world.
-      </p>
+            <p>
+              Antonio Guerriere is the founder and CEO of{' '}
+              <strong>Mind Technica</strong>, an AI and automation consultancy based
+              in Northern Ireland that helps organisations design and deploy practical
+              artificial intelligence systems.
+            </p>
 
-      <p>
-        Through Mind Technica, Antonio designs and deploys intelligent
-        systems — from machine learning pipelines to end-to-end automation —
-        for organisations looking to operate effectively in an increasingly
-        AI-driven world. He is also focused on building the partnerships and
-        ventures needed to scale this work beyond consulting, into products
-        and platforms that create lasting value.
-      </p>
+            <p>
+              Through Mind Technica, Antonio works on machine learning systems,
+              data pipelines, and end-to-end automation for organisations looking
+              to operate effectively in an increasingly AI-driven world. He is also
+              focused on building partnerships and ventures that can scale this work
+              beyond consulting into products and platforms.
+            </p>
 
-      <p>
-        Beyond the commercial side, Antonio is interested in the broader
-        questions surrounding artificial intelligence. In particular 
-        AI safety, interpretability, and alignment —
-        areas that will play an important role in how the technology evolves.
-        He believes that developing AI responsibly is not only a technical
-        challenge, but also a societal one, and that the people building these
-        systems have a responsibility to ensure they benefit society as a whole.
-      </p>
+            <p>
+              Antonio holds a First-Class Honours degree in Computing and IT
+              from The Open University (UK) and is currently pursuing
+              an MSc in Data Science and Artificial Intelligence at Queen’s
+              University Belfast. His interests include artificial intelligence
+              safety, interpretability, and alignment, and the broader societal
+              impact of advanced AI systems.
+            </p>
           </div>
 
           <div className={styles.links}>
@@ -105,8 +95,8 @@ export default function Home() {
             </h2>
             <ul className={styles.notesList}>
               {notes.map((note) => (
-                <li key={note.href} className={styles.notesItem}>
-                  <a href={note.href} className={styles.notesLink}>
+                <li key={note.slug} className={styles.notesItem}>
+                  <a href={`/notes/${note.slug}`} className={styles.notesLink}>
                     {note.title}
                   </a>
                 </li>

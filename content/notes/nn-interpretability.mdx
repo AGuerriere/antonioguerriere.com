@@ -1,0 +1,56 @@
+---
+title: "Neural Network Interpretability: A Practitioner's Perspective"
+description: "Practical approaches to understanding what neural networks learn and why it matters for production systems."
+date: "2025-02-20"
+---
+
+Deploying neural networks in production brings a question that academic benchmarks rarely address: can you explain what the model is doing and why? In regulated industries, in safety-critical applications, and increasingly in general business contexts, interpretability is not optional. It is a prerequisite for trust.
+
+## Why interpretability matters in practice
+
+The theoretical arguments for interpretability are well-established. But in practice, the motivation is often more immediate:
+
+- **Debugging.** When a model produces unexpected outputs, you need to understand which features drove the prediction. Without interpretability tools, debugging becomes guesswork.
+- **Stakeholder trust.** Business leaders and end users need to understand why a system makes specific recommendations. A black box, however accurate, faces resistance.
+- **Regulatory compliance.** Frameworks like the EU AI Act increasingly require explanations for automated decisions that affect individuals.
+- **Model improvement.** Understanding what a model has learned reveals gaps in training data, unexpected shortcuts, and opportunities for improvement.
+
+## Approaches that work in production
+
+After working with various interpretability methods, a few stand out for practical utility:
+
+### Feature attribution
+
+Methods like SHAP (SHapley Additive exPlanations) and integrated gradients provide per-prediction explanations. For tabular data, SHAP values are particularly effective—they decompose each prediction into the contribution of each input feature.
+
+The key insight is that global feature importance and local feature attribution tell different stories. A feature might be unimportant on average but critical for specific edge cases. Both views matter.
+
+### Attention analysis
+
+For transformer-based models, attention weights offer a window into what the model focuses on. While attention is not explanation in a strict sense—attention weights do not always correspond to causal importance—they provide useful heuristics for understanding model behaviour.
+
+In practice, I find attention analysis most valuable during development rather than in production explanations. It helps identify when a model is attending to spurious correlations in training data.
+
+### Probing classifiers
+
+Training simple linear classifiers on intermediate representations reveals what information is encoded at each layer of a network. This technique is especially useful for understanding language models—you can test whether specific layers encode syntactic structure, semantic meaning, or task-specific features.
+
+## The interpretability-performance trade-off
+
+A common assumption is that interpretable models must sacrifice performance. This is often overstated. In many practical settings:
+
+- Simpler, more interpretable models perform comparably to complex ones when features are well-engineered.
+- Post-hoc interpretability methods allow you to use complex models while still providing explanations.
+- The performance gap, when it exists, is frequently smaller than the gap between any model and the theoretical optimum.
+
+The real trade-off is in engineering effort. Building interpretable systems requires additional tooling, monitoring, and documentation. This investment pays off through easier debugging, faster iteration, and greater stakeholder confidence.
+
+## What I look for
+
+When evaluating a model for production deployment, I assess interpretability along three axes:
+
+1. **Can I explain individual predictions?** Given a specific input, can I identify the key factors that drove the output?
+2. **Can I identify failure modes?** Can I characterise the types of inputs where the model is likely to fail or produce unreliable results?
+3. **Can I detect distribution shift?** Can I monitor whether the model's input distribution is changing in ways that might affect reliability?
+
+If the answer to any of these is no, the model is not ready for production—regardless of its benchmark performance.

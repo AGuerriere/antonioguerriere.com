@@ -1,0 +1,103 @@
+/* ── Wrapper ─────────────────────────────────────────────── */
+.wrap {
+  max-width: 760px;
+  margin: min(8vh, 6rem) auto;
+  padding: 0 24px 80px;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+.header {
+  margin-bottom: 48px;
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.12s ease;
+}
+
+.back:hover {
+  opacity: 1;
+}
+
+.title {
+  font-size: clamp(28px, 6vw, 42px);
+  line-height: 1.1;
+  margin: 20px 0 0;
+  letter-spacing: -0.015em;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 2.2vw, 16px);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ── Notes list ──────────────────────────────────────────── */
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: light) {
+  .item,
+  .item:first-child {
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+.link:hover .noteTitle {
+  color: var(--accent);
+}
+
+.noteTitle {
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 600;
+  color: var(--fg);
+  line-height: 1.4;
+  transition: color 0.12s ease;
+}
+
+.noteMeta {
+  flex-shrink: 0;
+}
+
+.noteDate {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.noteDesc {
+  margin: 6px 0 0;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
