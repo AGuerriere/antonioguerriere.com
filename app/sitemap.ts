@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { getAllNotes } from '@/lib/notes'
 
+export const dynamic = 'force-static'
+
 const BASE_URL = 'https://antonioguerriere.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
