@@ -43,7 +43,7 @@ export default function Home() {
           {/* ── Bio ─────────────────────────────────────────── */}
           <div className={styles.prose}>
             <p>
-              Antonio Guerriere is the founder and CEO of{' '}
+              Antonio Guerriere is the founder and director of{' '}
               <strong>Mind Technica</strong>, an AI and automation consultancy based
               in Northern Ireland that helps organisations design and deploy practical
               artificial intelligence systems.
