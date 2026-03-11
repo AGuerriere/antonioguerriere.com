@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Antonio's Notes — Antonio Guerriere",
   description:
     'Articles on AI, automation, machine learning, and building technology companies.',
+  alternates: {
+    canonical: 'https://antonioguerriere.com/notes',
+  },
   openGraph: {
     title: "Antonio's Notes — Antonio Guerriere",
     description:

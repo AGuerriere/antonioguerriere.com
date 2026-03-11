@@ -18,6 +18,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: `${meta.title} — Antonio Guerriere`,
       description: meta.description,
+      alternates: {
+        canonical: `https://antonioguerriere.com/notes/${slug}`,
+      },
       openGraph: {
         title: meta.title,
         description: meta.description,

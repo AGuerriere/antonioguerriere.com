@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     url: 'https://antonioguerriere.com',
     images: [{ url: '/images/antonio.webp' }],
   },
+  alternates: {
+    canonical: 'https://antonioguerriere.com',
+  },
   robots: { index: true, follow: true },
 }
 
