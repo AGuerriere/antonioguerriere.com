@@ -6,10 +6,10 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Antonio Guerriere',
-  jobTitle: 'Founder & CEO',
+  jobTitle: 'Founder & Director',
   worksFor: { '@type': 'Organization', name: 'Mind Technica' },
   description:
-    "Founder and CEO of Mind Technica. AI and automation entrepreneur. MSc AI & Data Science candidate at Queen's University Belfast.",
+    "Founder and Director of Mind Technica. AI and automation entrepreneur. MSc AI & Data Science candidate at Queen's University Belfast.",
   url: 'https://antonioguerriere.com/',
   image: 'https://antonioguerriere.com/images/antonio.webp',
   sameAs: [
@@ -35,7 +35,7 @@ export default function Home() {
           <AvatarModal />
           <div>
             <h1>Antonio Guerriere</h1>
-            <p className={styles.subtitle}>Founder &amp; CEO, Mind Technica</p>
+            <p className={styles.subtitle}>Founder &amp; Director, Mind Technica</p>
           </div>
         </header>
 
@@ -116,7 +116,7 @@ export default function Home() {
               <li className={styles.entry}>
                 <p className={styles.entryTitle}>Mind Technica</p>
                 <p className={styles.entryMeta}>
-                  Founder &amp; CEO &nbsp;·&nbsp; AI &amp; Automation Consultancy
+                  Founder &amp; Director &nbsp;·&nbsp; AI &amp; Automation Consultancy
                 </p>
               </li>
             </ul>

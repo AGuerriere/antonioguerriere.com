@@ -14,13 +14,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://antonioguerriere.com'),
-  title: 'Antonio Guerriere — Founder & CEO, Mind Technica',
+  title: 'Antonio Guerriere — Founder & Director, Mind Technica',
   description:
-    'Antonio Guerriere is the founder and CEO of Mind Technica, an AI and automation consultancy based in Northern Ireland. MSc AI & Data Science candidate at Queen\'s University Belfast.',
+    'Antonio Guerriere is the founder and Director of Mind Technica, an AI and automation consultancy based in Northern Ireland. MSc AI & Data Science candidate at Queen\'s University Belfast.',
   openGraph: {
-    title: 'Antonio Guerriere — Founder & CEO, Mind Technica',
+    title: 'Antonio Guerriere — Founder & Director, Mind Technica',
     description:
-      'Founder and CEO of Mind Technica. AI, automation, and intelligent systems.',
+      'Founder and Director of Mind Technica. AI, automation, and intelligent systems.',
     type: 'website',
     url: 'https://antonioguerriere.com',
     images: [{ url: '/images/antonio.webp' }],
