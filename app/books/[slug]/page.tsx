@@ -110,7 +110,7 @@ export default async function BookPage({ params }: Props) {
               </time>
               {book.meta.rating != null && (
                 <p className={styles.rating}>
-                  <span className={styles.ratingLabel}>How strongly I recommend it</span>
+                  <span className={styles.ratingLabel}>How strongly I recommend it:</span>
                   <span className={styles.ratingValue}>{book.meta.rating}/10</span>
                 </p>
               )}

@@ -114,7 +114,7 @@ export default function Home() {
           <section className={styles.section} aria-labelledby="books-heading">
             <h2 id="books-heading" className={styles.sectionHeading}>
               <a href="/books" className={styles.sectionHeadingLink}>
-                Books
+                Book Notes
               </a>
             </h2>
             <ul className={styles.booksList}>

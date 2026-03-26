@@ -39,7 +39,7 @@ export default function BooksPage() {
         </Link>
         <h1 className={styles.title}>Books</h1>
         <p className={styles.subtitle}>
-          Reviews and notes on books worth reading.
+          Antonio's reviews and notes on books worth reading.
         </p>
       </header>
 
