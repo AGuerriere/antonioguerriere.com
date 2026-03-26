@@ -8,6 +8,7 @@ export interface BookMeta {
   description: string
   date: string
   coverImage: string
+  rating: number
   slug: string
 }
 
@@ -25,6 +26,7 @@ export function getAllBooks(): BookMeta[] {
       description: data.description,
       date: data.date,
       coverImage: data.coverImage,
+      rating: data.rating,
       slug: file.replace(/\.mdx$/, ''),
     } as BookMeta
   })
@@ -43,6 +45,7 @@ export function getBookBySlug(slug: string) {
       description: data.description,
       date: data.date,
       coverImage: data.coverImage,
+      rating: data.rating,
       slug,
     } as BookMeta,
     content,

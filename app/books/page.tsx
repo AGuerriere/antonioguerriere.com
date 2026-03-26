@@ -61,9 +61,14 @@ export default function BooksPage() {
                 )}
                 <div className={styles.infoContainer}>
                   <div className={styles.info}>
-                  <span className={styles.bookTitle}>{book.title}</span>
-                  <span className={styles.bookAuthor}>{book.author}</span>
-                  <span className={styles.bookDate}>{formatDate(book.date)}</span>
+                    <span className={styles.bookTitle}>{book.title}</span>
+                    <span className={styles.bookAuthor}>{book.author}</span>
+                    <span className={styles.bookDate}>{formatDate(book.date)}</span>
+                    {book.rating != null && (
+                      <span className={styles.bookRating}>
+                        Recommend: {book.rating}/10
+                      </span>
+                    )}
                   </div>
                   <p className={styles.bookDesc}>{book.description}</p>
                 </div>
