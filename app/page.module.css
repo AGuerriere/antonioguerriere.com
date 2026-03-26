@@ -168,6 +168,56 @@
   opacity: 1;
 }
 
+/* ── Books (homepage list) ───────────────────────────────── */
+.booksList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.booksItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.booksItem:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (prefers-color-scheme: light) {
+  .booksItem,
+  .booksItem:first-child {
+    border-color: rgba(0, 0, 0, 0.06);
+  }
+}
+
+.booksLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: clamp(14px, 2vw, 15px);
+  color: var(--fg);
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+.booksLink:hover {
+  color: var(--accent);
+}
+
+.bookCover {
+  flex-shrink: 0;
+  border-radius: 2px;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: light) {
+  .bookCover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  }
+}
+
 /* ── Entries (Work / Academic / Research) ────────────────── */
 .entries {
   list-style: none;

@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import AvatarModal from '@/components/AvatarModal'
 import { getAllNotes } from '@/lib/notes'
+import { getAllBooks } from '@/lib/books'
 import styles from './page.module.css'
 
 const jsonLd = {
@@ -24,6 +26,7 @@ const jsonLd = {
 
 export default function Home() {
   const notes = getAllNotes().slice(0, 3)
+  const books = getAllBooks().slice(0, 3)
   return (
     <>
       <script
@@ -104,6 +107,36 @@ export default function Home() {
             </ul>
             <a href="/notes" className={styles.seeMore}>
               All notes <span aria-hidden="true">→</span>
+            </a>
+          </section>
+
+          {/* ── Books ───────────────────────────────────────── */}
+          <section className={styles.section} aria-labelledby="books-heading">
+            <h2 id="books-heading" className={styles.sectionHeading}>
+              <a href="/books" className={styles.sectionHeadingLink}>
+                Books
+              </a>
+            </h2>
+            <ul className={styles.booksList}>
+              {books.map((book) => (
+                <li key={book.slug} className={styles.booksItem}>
+                  <a href={`/books/${book.slug}`} className={styles.booksLink}>
+                    {book.coverImage && (
+                      <Image
+                        src={book.coverImage}
+                        alt={`${book.title} cover`}
+                        width={32}
+                        height={45}
+                        className={styles.bookCover}
+                      />
+                    )}
+                    <span>{book.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href="/books" className={styles.seeMore}>
+              All books <span aria-hidden="true">→</span>
             </a>
           </section>
 
