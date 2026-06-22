@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm show next@latest version)",
+      "Bash(npm show next versions --json)",
+      "Bash(node -e \"const v=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''/dev/stdin'',''utf8''\\)\\); const stable=v.filter\\(x=>!x.includes\\(''canary''\\)&&!x.includes\\(''beta''\\)&&!x.includes\\(''rc''\\)\\); console.log\\(stable.slice\\(-5\\).join\\(''\\\\n''\\)\\)\")",
+      "Bash(npm show next dist-tags)",
+      "Bash(npm install next@latest)",
+      "Bash(npm run build)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git add .gitignore app/ components/ next-env.d.ts next.config.ts package-lock.json package.json public/robots.txt tsconfig.json public/images/antonio.webp)",
+      "Bash(git commit:*)",
+      "WebFetch(domain:www.darioamodei.com)",
+      "Bash(git add app/page.tsx app/page.module.css)",
+      "Bash(git add app/page.tsx)",
+      "Bash(git rm index.html robots.txt)",
+      "Bash(node -e \"console.log\\(require\\(''/Users/antonioguerriere/dev/antonioguerriereV2/node_modules/next/package.json''\\).version\\)\")",
+      "Bash(git checkout -b blog)",
+      "Bash(npm install next-mdx-remote gray-matter)",
+      "Bash(git checkout main)",
+      "Bash(git merge blog)",
+      "Bash(git push origin main)",
+      "Bash(git add wrangler.toml)",
+      "Bash(git push)",
+      "Bash(git add next.config.ts)",
+      "Bash(ls -la /Users/antonioguerriere/dev/antonioguerriere.com/app/notes/[slug]/)"
+    ]
+  }
+}

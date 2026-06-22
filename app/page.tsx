@@ -11,7 +11,7 @@ const jsonLd = {
   jobTitle: 'Founder & Director',
   worksFor: { '@type': 'Organization', name: 'Mind Technica' },
   description:
-    "Founder and Director of Mind Technica. AI and automation entrepreneur. MSc AI & Data Science candidate at Queen's University Belfast.",
+    "Founder and Director of Mind Technica, an AI, software, and automation consultancy in Northern Ireland. Currently studying for an MSc in Data Science & AI at Queen's University Belfast.",
   url: 'https://antonioguerriere.com/',
   image: 'https://antonioguerriere.com/images/antonio.webp',
   sameAs: [
@@ -47,17 +47,18 @@ export default function Home() {
           <div className={styles.prose}>
             <p>
               Antonio Guerriere is the founder and director of{' '}
-              <strong>Mind Technica</strong>, an AI and automation consultancy based
-              in Northern Ireland that helps organisations design and deploy practical
-              artificial intelligence systems.
+              <strong>Mind Technica</strong>, an AI, software, and automation
+              consultancy based in Northern Ireland that helps organisations design,
+              build, and deploy practical software and artificial intelligence
+              systems.
             </p>
 
             <p>
-              Through Mind Technica, Antonio works on machine learning systems,
-              data pipelines, and end-to-end automation for organisations looking
-              to operate effectively in an increasingly AI-driven world. He is also
-              focused on building partnerships and ventures that can scale this work
-              beyond consulting into products and platforms.
+              Through Mind Technica, Antonio delivers bespoke platforms, AI voice
+              agents, and cloud infrastructure built on AWS, giving organisations the
+              practical tools to operate effectively in an increasingly AI-driven
+              world. He is also focused on building partnerships and ventures that can
+              scale this work beyond consulting into products and platforms.
             </p>
 
             <p>
@@ -149,7 +150,7 @@ export default function Home() {
               <li className={styles.entry}>
                 <p className={styles.entryTitle}>Mind Technica</p>
                 <p className={styles.entryMeta}>
-                  Founder &amp; Director &nbsp;·&nbsp; AI &amp; Automation Consultancy
+                  Founder &amp; Director &nbsp;·&nbsp; AI, Software &amp; Automation Consultancy
                 </p>
               </li>
             </ul>
