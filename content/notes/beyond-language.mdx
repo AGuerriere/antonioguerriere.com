@@ -1,0 +1,53 @@
+---
+title: "Beyond Language: Why the Next Wave of AI Won't Come From LLMs Alone"
+description: "Why the next leap in AI capability may come from embodiment and continuous learning, not from scaling language models further."
+date: "2026-06-22"
+---
+
+For the past few years, the story of AI progress has been the story of large language models. GPT-3, GPT-4, Claude, Gemini: each release has been treated as a referendum on whether scaling laws would keep holding, whether the next model would be meaningfully smarter than the last. And for a while, that framing made sense. The jump from GPT-2 to GPT-3 to GPT-4 was real and visible.
+
+But if I'm honest about what I've watched happen over the last two or three years, the picture looks different from the one the headlines suggest. Most of the visible progress (the things that have actually changed how people use these systems) hasn't come from the base models getting dramatically smarter. It's come from tooling.
+
+## The progress we've seen is mostly scaffolding, not cognition
+
+Retrieval-augmented generation. Function calling and tool use. Agentic loops that let a model plan, act, observe, and re-plan. Longer context windows. Better fine-tuning and RLHF. Multi-step reasoning chains. These are genuinely useful innovations, and they've made LLMs dramatically more capable as products. But they're largely architecture built around a roughly fixed core: they compensate for what the underlying model can't do natively, rather than reflecting an exponential jump in the model's own understanding.
+
+The base models themselves have improved, but not at the rate the early scaling curves implied they might. Each new generation is better, but the gap between generations has been narrowing, not widening. We've started hitting the practical limits of what you can learn purely from text, even when that text is the entire scraped internet, every book, every research paper, every forum post humanity has produced.
+
+And that's the real issue. Text is a description of the world, not the world itself. An LLM trained purely on language learns an extraordinarily rich statistical model of how humans talk about reality, but it never directly experiences cause and effect, physical constraint, or consequence. It knows that ice melts in heat because it has read that sentence ten million times, not because it has ever held an ice cube.
+
+## Intelligence needs a model of the world, not just a model of language
+
+This is the part I think gets underweighted in most AI commentary: real understanding (the kind that lets you generalize to situations you've never seen described in any training set) seems to require a world model. Not a model of words about the world, but some internal representation of how physical reality behaves: that objects persist when occluded, that actions have consequences that unfold over time, that some things are reversible and others aren't.
+
+Humans don't learn this from language. A toddler understands gravity, object permanence, and basic cause-and-effect years before they have the vocabulary to describe any of it. Language is something we layer on top of an already-functioning model of the physical world. Current LLMs have it backwards: they have sophisticated language without the grounding underneath it.
+
+This is, I suspect, the actual ceiling that "more tooling on top of LLMs" runs into. You can give a model a calculator, a search engine, a code interpreter, a browser, and it gets better at tasks. But it's still reasoning about a world it has never touched, only read about.
+
+## Why robotics might be the unlock, not a side project
+
+This is where I think the next real discontinuity in AI capability comes from: not a bigger language model, but the fusion of AI and robotics. Not robotics as a separate engineering discipline that happens to use AI for perception and control, but as the mechanism by which models actually acquire a world model in the first place.
+
+A robotic system that has to manipulate objects, navigate physical space, and recover from failed actions is forced to build an internal representation of physics, in much the same way a child does. It has to learn that pushing a cup too hard knocks it over, that some surfaces are slippery, that objects don't disappear when you can't see them. That's not a dataset you can scrape: it has to be experienced, iteratively, through interaction and failure.
+
+This is also where I think the framing of "AGI via scaling text models" is somewhat off. Scaling text gives you a more articulate model of human knowledge. It doesn't, by itself, give you grounded understanding. Robotics (embodiment, sensorimotor feedback, physical trial and error) might be the path by which models stop merely describing the world convincingly and start actually modeling it.
+
+## Continuous learning, not one-shot training
+
+There's a second piece of this I think matters just as much: how these systems learn over time.
+
+Today's dominant paradigm is essentially: collect a massive static dataset, train a model on it once, freeze the weights, and ship it. Everything the model will ever "know" is fixed at that moment. Any updates require an entirely new, extremely expensive training run. That's nothing like how humans learn. We don't get trained once on the sum of human experience and then run in inference mode for the rest of our lives. We learn continuously, incrementally, from a constant stream of small experiences: most of which are individually unremarkable, but which accumulate into a working model of the world that keeps updating.
+
+I think the next wave of meaningful progress involves smaller, open-ended models that learn continuously rather than in one enormous batch: models that update their internal representations as they interact with the world, the way a baby's understanding of gravity sharpens with every dropped spoon, long before there's any formal "training" involved. Smaller, because a model that's learning constantly from direct experience doesn't need to have memorized the entire internet up front; it can build understanding the way an organism does, accumulating competence through interaction rather than ingesting it all at once.
+
+This doesn't mean today's massive pretrained language models become irrelevant. If anything, they're likely to remain the best starting point: a kind of broad, second-hand cultural and linguistic prior that a continuously learning, embodied system could be initialized with, the same way a human child is born with very little but rapidly leverages language and culture once they start picking it up. The combination (a language-and-knowledge prior plus a continuously updating, embodied world model) feels like a more plausible route to something resembling general intelligence than either approach pursued in isolation.
+
+## What this means in practice
+
+None of this is to say LLMs were a dead end: they were a necessary and genuinely impressive step, and they'll likely remain the interface layer for a long time, since language is still how humans communicate intent and reasoning. But I'd be cautious about assuming the next 10x jump in capability comes from a bigger version of the same architecture, trained on more of the same kind of data, with more tools bolted on.
+
+The more interesting frontier, to me, is the boring, expensive, physically constrained work of building systems that learn the way organisms learn: through embodiment, through consequence, through continuous experience rather than a single enormous training run. That's a much harder problem than scaling a transformer. It's also, I suspect, the one that actually matters if "understanding the world" is the goal rather than "describing it convincingly."
+
+---
+ 
+<small>These are personal reflections, not predictions I'd stake a business on, but it's the lens I keep coming back to when I think about where this field goes next.</small>
